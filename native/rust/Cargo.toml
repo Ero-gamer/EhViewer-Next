@@ -18,7 +18,7 @@ android-26 = ["android", "ndk/api-level-26"]
 [dependencies]
 ehviewer_core = { path = "core" }
 anyhow = "1.0"
-jni = { version = "0.21", optional = true }
+jni = { version = "0.22", optional = true }
 jni_fn = { version = "0.1", optional = true }
 ndk = { version = "0.9", optional = true }
 android_logger = { default-features = false, version = "0.15", optional = true }
