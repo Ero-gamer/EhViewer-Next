@@ -42,7 +42,7 @@ jobs:
       publish: ${{ steps.plan.outputs.publish }}
       build: ${{ steps.plan.outputs.build }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 0
@@ -103,7 +103,7 @@ jobs:
       RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
       RELEASE_ABI: ${{ matrix.abi }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.prepare.outputs.sha }}
           fetch-depth: 0
@@ -181,7 +181,7 @@ jobs:
     env:
       RELEASE_TAG: ${{ needs.prepare.outputs.tag }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           ref: ${{ needs.prepare.outputs.sha }}
           fetch-depth: 0
